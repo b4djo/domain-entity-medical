@@ -1,11 +1,12 @@
 {
-    "require": {
-        "beberlei/assert": "^3.2"
-    },
     "autoload": {
         "psr-4": {
-            "Medical\\": "entities/",
+            "Medical\\Entities\\": "entities/",
             "Medical\\Tests\\": "tests/"
         }
+    },
+    "require": {
+        "beberlei/assert": "^3.2",
+        "phpunit/phpunit": "^7.4"
     }
 }

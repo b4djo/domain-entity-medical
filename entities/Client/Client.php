@@ -1,12 +1,12 @@
 <?php
 
-namespace Medical\entities\Client;
+namespace Medical\Entities\Client;
 
 use Medical\entities\Client\Dto\ClientDto;
 
 /**
  * Class Client
- * @package Medical\entities\Client
+ * @package Medical\Entities\Client
  */
 class Client
 {

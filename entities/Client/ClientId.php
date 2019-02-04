@@ -1,17 +1,17 @@
 <?php
 
-namespace Medical\entities\Client;
+namespace Medical\Entities\Client;
 
 /**
  * Class ClientId
- * @package Medical\entities\Client
+ * @package Medical\Entities\Client
  */
 class ClientId
 {
     /**
      * @var string
      */
-    public $id;
+    private $id;
 
     /**
      * ClientId constructor
@@ -21,5 +21,13 @@ class ClientId
     public function __construct(string $id)
     {
         $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
     }
 }
