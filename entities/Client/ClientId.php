@@ -1,10 +1,10 @@
 <?php
 
-namespace entities\Client;
+namespace Medical\entities\Client;
 
 /**
  * Class ClientId
- * @package entities\Client
+ * @package Medical\entities\Client
  */
 class ClientId
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace entities\Client;
+namespace Medical\entities\Client;
 
-use entities\Client\Dto\ClientDto;
+use Medical\entities\Client\Dto\ClientDto;
 
 /**
  * Class Client
- * @package Entities
+ * @package Medical\entities\Client
  */
 class Client
 {
@@ -82,5 +82,13 @@ class Client
     public function changeAddress(Address $address): void
     {
         $this->address = $address;
+    }
+
+    /**
+     * @return ClientId
+     */
+    public function getId(): ClientId
+    {
+        return $this->id;
     }
 }

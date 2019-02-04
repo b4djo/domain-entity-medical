@@ -1,15 +1,15 @@
 <?php
 
-namespace entities\Client\Dto;
+namespace Medical\entities\Client\Dto;
 
-use entities\Client\Address;
-use entities\Client\ClientId;
-use entities\Client\Name;
-use entities\Client\Phone;
+use Medical\entities\Client\Address;
+use Medical\entities\Client\ClientId;
+use Medical\entities\Client\Name;
+use Medical\entities\Client\Phone;
 
 /**
  * Class ClientDto
- * @package Entities\Dto
+ * @package Medical\entities\Client\Dto
  */
 class ClientDto
 {

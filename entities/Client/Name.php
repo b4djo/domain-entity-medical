@@ -1,12 +1,12 @@
 <?php
 
-namespace entities\Client;
+namespace Medical\entities\Client;
 
 use Assert\Assertion;
 
 /**
  * Class Name
- * @package Entities
+ * @package Medical\entities\Client
  */
 class Name
 {
