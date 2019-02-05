@@ -2,11 +2,14 @@
     "autoload": {
         "psr-4": {
             "Medical\\Entities\\": "entities/",
+            "Medical\\Services\\": "services/",
+            "Medical\\Dispatchers\\": "dispatchers/",
             "Medical\\Tests\\": "tests/"
         }
     },
     "require": {
         "beberlei/assert": "^3.2",
-        "phpunit/phpunit": "^7.4"
+        "phpunit/phpunit": "^7.4",
+        "ramsey/uuid": "^3.8"
     }
 }

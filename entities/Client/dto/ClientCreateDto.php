@@ -8,38 +8,23 @@ use Medical\Entities\Client\Name;
 use Medical\Entities\Client\Phones;
 
 /**
- * Class ClientDto
+ * Class ClientCreateDto
  * @package Medical\Entities\Client\dto
  */
-class ClientDto
+class ClientCreateDto
 {
     /**
-     * @var ClientId
-     */
-    public $id;
-
-    /**
-     * @var Name
+     * @var NameDto
      */
     public $name;
 
     /**
-     * @var \DateTimeImmutable
-     */
-    public $birthDate;
-
-    /**
-     * @var Phones
+     * @var PhoneDto[]
      */
     public $phones;
 
     /**
-     * @var Address
+     * @var AddressDto
      */
     public $address;
-
-    /**
-     * @var bool
-     */
-    public $active;
 }
