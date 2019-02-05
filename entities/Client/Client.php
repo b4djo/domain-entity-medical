@@ -2,7 +2,14 @@
 
 namespace Medical\Entities\Client;
 
-use Medical\entities\Client\Dto\ClientDto;
+use Medical\Entities\Client\Dto\ClientDto;
+use Medical\Entities\Client\events\ClientAddressChanged;
+use Medical\Entities\Client\events\ClientCreated;
+use Medical\Entities\Client\events\ClientPhoneAdded;
+use Medical\Entities\Client\events\ClientPhoneRemoved;
+use Medical\Entities\Client\events\ClientRemoved;
+use Medical\Entities\Client\events\ClientRenamed;
+use Medical\Entities\EventTrait;
 
 /**
  * Class Client
@@ -10,6 +17,8 @@ use Medical\entities\Client\Dto\ClientDto;
  */
 class Client
 {
+    use EventTrait;
+
     /**
      * @var ClientId
      */
@@ -26,9 +35,9 @@ class Client
     private $birthDate;
 
     /**
-     * @var Phone[]
+     * @var Phones
      */
-    private $phones = [];
+    private $phones;
 
     /**
      * @var Address
@@ -39,6 +48,11 @@ class Client
      * @var \DateTimeImmutable
      */
     private $createDate;
+
+    /**
+     * @var bool
+     */
+    private $active;
 
     /**
      * Client constructor.
@@ -54,18 +68,12 @@ class Client
         $this->id         = $clientDto->id;
         $this->name       = $clientDto->name;
         $this->birthDate  = $clientDto->birthDate;
-        $this->phone      = [];
+        $this->phones     = $clientDto->phones;
         $this->address    = $clientDto->address;
         $this->createDate = new \DateTimeImmutable();
+        $this->active     = $clientDto->active;
 
-        foreach ($clientDto->phones as $phone) {
-            foreach ($this->phones as $current) {
-                if ($current->isEqualTo($phone)) {
-                    throw new \DomainException('Phone already exists.');
-                }
-            }
-            $this->phones[] = $phone;
-        }
+        $this->setEvent(new ClientCreated($this->id));
     }
 
     /**
@@ -74,6 +82,8 @@ class Client
     public function rename(Name $name): void
     {
         $this->name = $name;
+
+        $this->setEvent(new ClientRenamed($name));
     }
 
     /**
@@ -82,6 +92,8 @@ class Client
     public function changeAddress(Address $address): void
     {
         $this->address = $address;
+
+        $this->setEvent(new ClientAddressChanged($address));
     }
 
     /**
@@ -106,5 +118,42 @@ class Client
     public function getAddress(): Address
     {
         return $this->address;
+    }
+
+    /**
+     * @param Phone $phone
+     */
+    public function addPhone(Phone $phone): void
+    {
+        $this->phones->add($phone);
+
+        $this->setEvent(new ClientPhoneAdded($this->id, $phone));
+    }
+
+    /**
+     * @return Phones
+     */
+    public function getPhones(): Phones
+    {
+        return $this->phones;
+    }
+
+    /**
+     * @param int $index
+     */
+    public function removePhone(int $index): void
+    {
+        $phone = $this->phones->remove($index);
+
+        $this->setEvent(new ClientPhoneRemoved($this->id, $phone));
+    }
+
+    public function remove(): void
+    {
+        if ($this->active) {
+            throw new \DomainException('Cannot remove active client.');
+        }
+
+        $this->setEvent(new ClientRemoved(false));
     }
 }

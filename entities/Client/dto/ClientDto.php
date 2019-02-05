@@ -6,6 +6,7 @@ use Medical\Entities\Client\Address;
 use Medical\Entities\Client\ClientId;
 use Medical\Entities\Client\Name;
 use Medical\Entities\Client\Phone;
+use Medical\Entities\Client\Phones;
 
 /**
  * Class ClientDto
@@ -29,7 +30,7 @@ class ClientDto
     public $birthDate;
 
     /**
-     * @var Phone[]
+     * @var Phones
      */
     public $phones;
 
@@ -37,4 +38,9 @@ class ClientDto
      * @var Address
      */
     public $address;
+
+    /**
+     * @var bool
+     */
+    public $active;
 }
