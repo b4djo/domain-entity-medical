@@ -2,26 +2,18 @@
 
 namespace Medical\Entities\Client;
 
+use Medical\Entities\Id;
+
 /**
  * Class ClientId
  * @package Medical\Entities\Client
  */
-class ClientId
+class ClientId extends Id
 {
     /**
      * @var string
      */
     private $id;
-
-    /**
-     * ClientId constructor
-     *
-     * @param string $id
-     */
-    public function __construct(string $id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return string
