@@ -2,6 +2,7 @@
 
 namespace Medical\Entities\Client;
 
+use Medical\Entities\AggregateInterface;
 use Medical\Entities\Client\Dto\ClientDto;
 use Medical\Entities\Client\events\ClientAddressChanged;
 use Medical\Entities\Client\events\ClientCreated;
@@ -15,7 +16,7 @@ use Medical\Entities\EventTrait;
  * Class Client
  * @package Medical\Entities\Client
  */
-class Client
+class Client implements AggregateInterface
 {
     use EventTrait;
 
