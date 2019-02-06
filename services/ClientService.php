@@ -22,10 +22,21 @@ use Medical\Repositories\ClientRepositoryInterface;
  */
 class ClientService
 {
+    /**
+     * @var ClientRepositoryInterface
+     */
     private $clients;
 
+    /**
+     * @var EventDispatcherInterface
+     */
     private $dispatcher;
 
+    /**
+     * ClientService constructor.
+     * @param ClientRepositoryInterface $clients
+     * @param EventDispatcherInterface $dispatcher
+     */
     public function __construct(ClientRepositoryInterface $clients, EventDispatcherInterface $dispatcher)
     {
         $this->clients    = $clients;
@@ -67,6 +78,10 @@ class ClientService
         $this->dispatcher->dispatch($employee->getEvents());
     }
 
+    /**
+     * @param ClientId $id
+     * @param NameDto $dto
+     */
     public function rename(ClientId $id, NameDto $dto): void
     {
         $client = $this->clients->get($id);
@@ -79,6 +94,10 @@ class ClientService
         $this->dispatcher->dispatch($client->getEvents());
     }
 
+    /**
+     * @param ClientId $id
+     * @param AddressDto $dto
+     */
     public function changeAddress(ClientId $id, AddressDto $dto): void
     {
         $client = $this->clients->get($id);
@@ -93,6 +112,10 @@ class ClientService
         $this->dispatcher->dispatch($client->getEvents());
     }
 
+    /**
+     * @param ClientId $id
+     * @param PhoneDto $dto
+     */
     public function addPhone(ClientId $id, PhoneDto $dto): void
     {
         $client = $this->clients->get($id);
@@ -105,6 +128,10 @@ class ClientService
         $this->dispatcher->dispatch($client->getEvents());
     }
 
+    /**
+     * @param ClientId $id
+     * @param $index
+     */
     public function removePhone(ClientId $id, $index): void
     {
         $client = $this->clients->get($id);
@@ -113,22 +140,31 @@ class ClientService
         $this->dispatcher->dispatch($client->getEvents());
     }
 
-    /*public function archive(ClientId $id, ClientActiveDto $dto): void
+    /**
+     * @param ClientId $id
+     */
+    public function active(ClientId $id): void
     {
-        $employee = $this->employees->get($id);
-        $employee->archive($dto->date);
-        $this->employees->save($employee);
-        $this->dispatcher->dispatch($employee->releaseEvents());
+        $client = $this->clients->get($id);
+        $client->active();
+        $this->clients->save($client);
+        $this->dispatcher->dispatch($client->getEvents());
     }
 
-    public function reinstate(ClientId $id, EmployeeReinstateDto $dto): void
+    /**
+     * @param ClientId $id
+     */
+    public function notActive(ClientId $id): void
     {
-        $employee = $this->employees->get($id);
-        $employee->reinstate($dto->date);
-        $this->employees->save($employee);
-        $this->dispatcher->dispatch($employee->releaseEvents());
-    }*/
+        $client = $this->clients->get($id);
+        $client->notActive();
+        $this->clients->save($client);
+        $this->dispatcher->dispatch($client->getEvents());
+    }
 
+    /**
+     * @param ClientId $id
+     */
     public function remove(ClientId $id): void
     {
         $client = $this->clients->get($id);

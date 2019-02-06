@@ -4,6 +4,7 @@ namespace Medical\Entities\Client;
 
 use Medical\Entities\AggregateInterface;
 use Medical\Entities\Client\Dto\ClientDto;
+use Medical\Entities\Client\events\ClientActive;
 use Medical\Entities\Client\events\ClientAddressChanged;
 use Medical\Entities\Client\events\ClientCreated;
 use Medical\Entities\Client\events\ClientPhoneAdded;
@@ -156,5 +157,23 @@ class Client implements AggregateInterface
         }
 
         $this->setEvent(new ClientRemoved(false));
+    }
+
+    public function notActive(): void
+    {
+        if ($this->active) {
+            $this->active = false;
+        }
+
+        $this->setEvent(new ClientActive(false));
+    }
+
+    public function active(): void
+    {
+        if (!$this->active) {
+            $this->active = true;
+        }
+
+        $this->setEvent(new ClientActive(true));
     }
 }
