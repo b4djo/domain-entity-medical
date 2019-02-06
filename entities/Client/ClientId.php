@@ -13,7 +13,7 @@ class ClientId extends Id
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * @return string
