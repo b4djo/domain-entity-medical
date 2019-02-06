@@ -8,10 +8,12 @@ use Medical\Entities\Client\Client;
 use Medical\Entities\Client\ClientId;
 use Medical\Entities\Client\dto\AddressDto;
 use Medical\Entities\Client\dto\ClientCreateDto;
+use Medical\Entities\Client\dto\ClientDto;
 use Medical\Entities\Client\dto\NameDto;
 use Medical\Entities\Client\dto\PhoneDto;
 use Medical\Entities\Client\Name;
 use Medical\Entities\Client\Phone;
+use Medical\Entities\Client\Phones;
 use Medical\Repositories\ClientRepositoryInterface;
 
 /**
@@ -30,30 +32,37 @@ class ClientService
         $this->dispatcher = $dispatcher;
     }
 
+    /**
+     * @param ClientCreateDto $dto
+     * @throws \Exception
+     */
     public function create(ClientCreateDto $dto): void
     {
-        $employee = new Client(
-            $this->clients->nextId(),
-            new Name(
-                $dto->name->last,
-                $dto->name->first,
-                $dto->name->middle
-            ),
-            new Address(
-                $dto->address->country,
-                $dto->address->region,
-                $dto->address->city,
-                $dto->address->street,
-                $dto->address->house
-            ),
-            array_map(function (PhoneDto $phone) {
-                return new Phone(
-                    $phone->country,
-                    $phone->code,
-                    $phone->number
-                );
-            }, $dto->phones)
+        $clientDto = new ClientDto();
+        $clientDto->id = $this->clients->nextId();
+        $clientDto->name = new Name(
+            $dto->name->last,
+            $dto->name->first,
+            $dto->name->middle
         );
+        $clientDto->address = new Address(
+            $dto->address->country,
+            $dto->address->region,
+            $dto->address->city,
+            $dto->address->street,
+            $dto->address->house
+        );
+        $clientDto->phones = new Phones(
+            array_map(function (PhoneDto $phone) {
+            return new Phone(
+                $phone->country,
+                $phone->code,
+                $phone->number
+            );
+        }, $dto->phones));
+
+        $employee = new Client($clientDto);
+
         $this->clients->add($employee);
         $this->dispatcher->dispatch($employee->getEvents());
     }

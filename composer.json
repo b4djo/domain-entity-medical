@@ -1,4 +1,17 @@
 {
+    "name": "b4djo/domain-entity-medical",
+    "description": "Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert",
+            "email": "fatkhullin.robert@gmail.com",
+            "homepage": "https://robertobadjio.ru",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Medical\\Entities\\": "entities/",
@@ -10,6 +23,7 @@
     "require": {
         "beberlei/assert": "^3.2",
         "phpunit/phpunit": "^7.4",
-        "ramsey/uuid": "^3.8"
+        "ramsey/uuid": "^3.8",
+        "php": ">=7.2.0"
     }
 }
