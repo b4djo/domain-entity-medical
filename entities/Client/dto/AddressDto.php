@@ -1,6 +1,6 @@
 <?php
 
-namespace Medical\Entities\Client\dto;
+namespace robertobadjio\medical\entities\Client\dto;
 
 /**
  * Class AddressDto

@@ -1,8 +1,8 @@
 <?php
 
-namespace Medical\Entities\Client\events;
+namespace robertobadjio\medical\entities\Client\events;
 
-use Medical\Entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\ClientId;
 
 /**
  * Class ClientCreated

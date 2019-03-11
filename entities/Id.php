@@ -1,6 +1,6 @@
 <?php
 
-namespace Medical\Entities;
+namespace robertobadjio\medical\entities;
 
 use Assert\Assertion;
 

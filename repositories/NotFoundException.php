@@ -1,6 +1,6 @@
 <?php
 
-namespace Medical\Repositories;
+namespace robertobadjio\medical\repositories;
 
 /**
  * Class NotFoundException

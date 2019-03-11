@@ -1,6 +1,6 @@
 <?php
 
-namespace Medical\Entities\Client\events;
+namespace robertobadjio\medical\entities\Client\events;
 
 /**
  * Class ClientNotActive

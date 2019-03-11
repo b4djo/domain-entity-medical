@@ -1,9 +1,9 @@
 <?php
 
-namespace Medical\Entities\unit\entities\Client;
+namespace robertobadjio\medical\entities\unit\entities\Client;
 
-use Medical\Entities\Client\events\ClientRemoved;
-use Medical\Tests\unit\entities\Client\ClientBuilder;
+use robertobadjio\medical\entities\Client\events\ClientRemoved;
+use robertobadjio\medical\tests\unit\entities\Client\ClientBuilder;
 use PHPUnit\Framework\TestCase;
 
 /**

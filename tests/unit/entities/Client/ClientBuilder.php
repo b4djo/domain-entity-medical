@@ -1,14 +1,14 @@
 <?php
 
-namespace Medical\Tests\unit\entities\Client;
+namespace robertobadjio\medical\Tests\unit\entities\Client;
 
-use Medical\Entities\Client\Address;
-use Medical\Entities\Client\Client;
-use Medical\Entities\Client\ClientId;
-use Medical\Entities\Client\dto\ClientDto;
-use Medical\Entities\Client\Name;
-use Medical\Entities\Client\Phone;
-use Medical\Entities\Client\Phones;
+use robertobadjio\medical\entities\Client\Address;
+use robertobadjio\medical\entities\Client\Client;
+use robertobadjio\medical\entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\dto\ClientDto;
+use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Client\Phone;
+use robertobadjio\medical\entities\Client\Phones;
 
 /**
  * Class ClientBuilder

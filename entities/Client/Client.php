@@ -1,17 +1,17 @@
 <?php
 
-namespace Medical\Entities\Client;
+namespace robertobadjio\medical\entities\Client;
 
-use Medical\Entities\AggregateInterface;
-use Medical\Entities\Client\Dto\ClientDto;
-use Medical\Entities\Client\events\ClientActive;
-use Medical\Entities\Client\events\ClientAddressChanged;
-use Medical\Entities\Client\events\ClientCreated;
-use Medical\Entities\Client\events\ClientPhoneAdded;
-use Medical\Entities\Client\events\ClientPhoneRemoved;
-use Medical\Entities\Client\events\ClientRemoved;
-use Medical\Entities\Client\events\ClientRenamed;
-use Medical\Entities\EventTrait;
+use robertobadjio\medical\entities\AggregateInterface;
+use robertobadjio\medical\entities\Client\dto\ClientDto;
+use robertobadjio\medical\entities\Client\events\ClientActive;
+use robertobadjio\medical\entities\Client\events\ClientAddressChanged;
+use robertobadjio\medical\entities\Client\events\ClientCreated;
+use robertobadjio\medical\entities\Client\events\ClientPhoneAdded;
+use robertobadjio\medical\entities\Client\events\ClientPhoneRemoved;
+use robertobadjio\medical\entities\Client\events\ClientRemoved;
+use robertobadjio\medical\entities\Client\events\ClientRenamed;
+use robertobadjio\medical\entities\EventTrait;
 
 /**
  * Class Client

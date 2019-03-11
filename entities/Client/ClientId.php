@@ -1,8 +1,8 @@
 <?php
 
-namespace Medical\Entities\Client;
+namespace robertobadjio\medical\entities\Client;
 
-use Medical\Entities\Id;
+use robertobadjio\medical\entities\Id;
 
 /**
  * Class ClientId

@@ -1,11 +1,11 @@
 <?php
 
-namespace Medical\Entities\Client\dto;
+namespace robertobadjio\medical\entities\Client\dto;
 
-use Medical\Entities\Client\Address;
-use Medical\Entities\Client\ClientId;
-use Medical\Entities\Client\Name;
-use Medical\Entities\Client\Phones;
+use robertobadjio\medical\entities\Client\Address;
+use robertobadjio\medical\entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Client\Phones;
 
 /**
  * Class ClientDto

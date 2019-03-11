@@ -1,5 +1,5 @@
 {
-    "name": "b4djo/domain-entity-medical",
+    "name": "robertobadjio/domain-entity-medical",
     "description": "Package",
     "type": "library",
     "license": "MIT",
@@ -14,10 +14,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Medical\\Entities\\": "entities/",
-            "Medical\\Services\\": "services/",
-            "Medical\\Dispatchers\\": "dispatchers/",
-            "Medical\\Tests\\": "tests/"
+            "robertobadjio\\medical\\": ""
         }
     },
     "require": {

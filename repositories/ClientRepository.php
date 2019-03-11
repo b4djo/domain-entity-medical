@@ -1,9 +1,9 @@
 <?php
 
-namespace Medical\Repositories;
+namespace robertobadjio\medical\repositories;
 
-use Medical\Entities\Client\Client;
-use Medical\Entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\Client;
+use robertobadjio\medical\entities\Client\ClientId;
 use Ramsey\Uuid\Uuid;
 
 /**

@@ -1,20 +1,20 @@
 <?php
 
-namespace Medical\Services;
+namespace robertobadjio\medical\services;
 
-use Medical\Dispatchers\EventDispatcherInterface;
-use Medical\Entities\Client\Address;
-use Medical\Entities\Client\Client;
-use Medical\Entities\Client\ClientId;
-use Medical\Entities\Client\dto\AddressDto;
-use Medical\Entities\Client\dto\ClientCreateDto;
-use Medical\Entities\Client\dto\ClientDto;
-use Medical\Entities\Client\dto\NameDto;
-use Medical\Entities\Client\dto\PhoneDto;
-use Medical\Entities\Client\Name;
-use Medical\Entities\Client\Phone;
-use Medical\Entities\Client\Phones;
-use Medical\Repositories\ClientRepositoryInterface;
+use robertobadjio\medical\dispatchers\EventDispatcherInterface;
+use robertobadjio\medical\entities\Client\Address;
+use robertobadjio\medical\entities\Client\Client;
+use robertobadjio\medical\entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\dto\AddressDto;
+use robertobadjio\medical\entities\Client\dto\ClientCreateDto;
+use robertobadjio\medical\entities\Client\dto\ClientDto;
+use robertobadjio\medical\entities\Client\dto\NameDto;
+use robertobadjio\medical\entities\Client\dto\PhoneDto;
+use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Client\Phone;
+use robertobadjio\medical\entities\Client\Phones;
+use robertobadjio\medical\repositories\ClientRepositoryInterface;
 
 /**
  * Class ClientService
