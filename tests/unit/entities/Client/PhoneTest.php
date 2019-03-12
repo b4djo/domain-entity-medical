@@ -1,16 +1,15 @@
 <?php
 
-namespace unit\entities\Client;
+namespace robertobadjio\medical\tests\unit\entities\Client;
 
-use Medical\Entities\Client\events\ClientPhoneAdded;
-use Medical\Entities\Client\events\ClientPhoneRemoved;
-use Medical\Entities\Client\Phone;
-use Medical\Tests\unit\entities\Client\ClientBuilder;
+use robertobadjio\medical\entities\Client\events\ClientPhoneAdded;
+use robertobadjio\medical\entities\Client\events\ClientPhoneRemoved;
+use robertobadjio\medical\entities\Client\Phone;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class PhoneTest
- * @package unit\entities\Client
+ * @package robertobadjio\medical\tests\unit\entities\Client
  */
 class PhoneTest extends TestCase
 {

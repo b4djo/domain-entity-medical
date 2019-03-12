@@ -4,7 +4,7 @@ namespace robertobadjio\medical\dispatchers;
 
 /**
  * Class DummyEventDispatcher
- * @package Medical\Dispatchers
+ * @package robertobadjio\medical\dispatchers
  */
 class DummyEventDispatcher implements EventDispatcherInterface
 {

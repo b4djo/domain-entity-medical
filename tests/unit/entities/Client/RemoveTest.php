@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class RemoveTest
- * @package Medical\Entities\unit\entities\Client
+ * @package robertobadjio\medical\entities\unit\entities\Client
  */
 class RemoveTest extends TestCase
 {

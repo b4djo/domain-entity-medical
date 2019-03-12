@@ -8,7 +8,7 @@ use Ramsey\Uuid\Uuid;
 
 /**
  * Class ClientRepository
- * @package Medical\Repositories
+ * @package robertobadjio\medical\repositories
  */
 class ClientRepository implements ClientRepositoryInterface
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Medical\Tests\unit\entities\Client;
+namespace robertobadjio\medical\tests\unit\entities\Client;
 
-use Medical\entities\Client\ClientId;
+use robertobadjio\medical\entities\Client\ClientId;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class CreateTest
- * @package Medical\tests\unit\entities\Client
+ * @package robertobadjio\medical\tests\unit\entities\Client
  */
 class CreateTest extends TestCase
 {

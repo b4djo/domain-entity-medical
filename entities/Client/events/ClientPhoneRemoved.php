@@ -7,7 +7,7 @@ use robertobadjio\medical\entities\Client\Phone;
 
 /**
  * Class ClientPhoneRemoved
- * @package Medical\Entities\Client\events
+ * @package robertobadjio\medical\entities\Client\events
  */
 class ClientPhoneRemoved
 {

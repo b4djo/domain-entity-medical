@@ -6,7 +6,7 @@ use Assert\Assertion;
 
 /**
  * Class Phone
- * @package Medical\Entities\Client
+ * @package robertobadjio\medical\entities\Client
  */
 class Phone
 {

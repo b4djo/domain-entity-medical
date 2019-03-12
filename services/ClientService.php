@@ -18,7 +18,7 @@ use robertobadjio\medical\repositories\ClientRepositoryInterface;
 
 /**
  * Class ClientService
- * @package Medical\Services
+ * @package robertobadjio\medical\services
  */
 class ClientService
 {

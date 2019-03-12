@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities\Client\dto;
 
 /**
  * Class NameDto
- * @package Medical\Entities\Client\dto
+ * @package robertobadjio\medical\entities\Client\dto
  */
 class NameDto
 {

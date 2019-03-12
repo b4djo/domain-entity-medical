@@ -6,6 +6,7 @@ use Assert\Assertion;
 
 /**
  * Class Id
+ * @package robertobadjio\medical\entities
  */
 abstract class Id
 {
@@ -26,11 +27,18 @@ abstract class Id
         $this->id = $id;
     }
 
+    /**
+     * @return null
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @param self $other
+     * @return bool
+     */
     public function isEqualTo(self $other): bool
     {
         return $this->getId() === $other->getId();

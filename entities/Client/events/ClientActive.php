@@ -3,8 +3,8 @@
 namespace robertobadjio\medical\entities\Client\events;
 
 /**
- * Class ClientNotActive
- * @package Medical\Entities\Client\events
+ * Class ClientActive
+ * @package robertobadjio\medical\entities\Client\events
  */
 class ClientActive
 {

@@ -6,7 +6,7 @@ use robertobadjio\medical\entities\Id;
 
 /**
  * Class ClientId
- * @package Medical\Entities\Client
+ * @package robertobadjio\medical\entities\Client
  */
 class ClientId extends Id
 {

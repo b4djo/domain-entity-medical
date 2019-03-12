@@ -6,7 +6,7 @@ use robertobadjio\medical\entities\Client\ClientId;
 
 /**
  * Class ClientCreated
- * @package Medical\Entities\Client\events
+ * @package robertobadjio\medical\entities\Client\events
  */
 class ClientCreated
 {

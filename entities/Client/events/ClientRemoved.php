@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities\Client\events;
 
 /**
  * Class ClientRemoved
- * @package Medical\Entities\Client\events
+ * @package robertobadjio\medical\entities\Client\events
  */
 class ClientRemoved
 {

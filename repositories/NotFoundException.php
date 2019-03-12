@@ -4,7 +4,7 @@ namespace robertobadjio\medical\repositories;
 
 /**
  * Class NotFoundException
- * @package Medical\Repositories
+ * @package robertobadjio\medical\repositories
  */
 class NotFoundException extends \LogicException
 {

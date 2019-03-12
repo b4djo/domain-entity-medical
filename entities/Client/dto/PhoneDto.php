@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities\Client\dto;
 
 /**
  * Class PhoneDto
- * @package Client\dto
+ * @package robertobadjio\medical\entities\Client\dto'
  */
 class PhoneDto
 {

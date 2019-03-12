@@ -12,7 +12,7 @@ use robertobadjio\medical\entities\Client\Phones;
 
 /**
  * Class ClientBuilder
- * @package unit\entities\Client
+ * @package robertobadjio\medical\Tests\unit\entities\Client
  */
 class ClientBuilder
 {

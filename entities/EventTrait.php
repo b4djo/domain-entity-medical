@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities;
 
 /**
  * Trait EventTrait
- * @package Medical\Entities
+ * @package robertobadjio\medical\entities
  */
 trait EventTrait
 {

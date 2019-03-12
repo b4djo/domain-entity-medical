@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities;
 
 /**
  * Interface AggregateInterface
- * @package Medical\Entities
+ * @package robertobadjio\medical\entities
  */
 interface AggregateInterface
 {

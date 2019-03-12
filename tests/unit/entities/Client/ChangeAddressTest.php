@@ -1,14 +1,14 @@
 <?php
 
-namespace Medical\Tests\unit\entities\Client;
+namespace robertobadjio\medical\tests\unit\entities\Client;
 
-use Medical\Entities\Client\Address;
-use Medical\Entities\Client\events\ClientAddressChanged;
+use robertobadjio\medical\entities\Client\Address;
+use robertobadjio\medical\entities\Client\events\ClientAddressChanged;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ChangeAddressTest
- * @package Medical\tests\unit\entities\Client
+ * @package robertobadjio\medical\tests\unit\entities\Client
  */
 class ChangeAddressTest extends TestCase
 {

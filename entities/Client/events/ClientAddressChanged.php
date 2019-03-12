@@ -6,7 +6,7 @@ use robertobadjio\medical\entities\Client\Address;
 
 /**
  * Class ClientAddressChanged
- * @package Medical\Entities\Client\events
+ * @package robertobadjio\medical\entities\Client\events
  */
 class ClientAddressChanged
 {

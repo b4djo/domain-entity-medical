@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities\Client;
 
 /**
  * Class Phones
- * @package Medical\Entities\Client
+ * @package robertobadjio\medical\entities\Client
  */
 class Phones
 {

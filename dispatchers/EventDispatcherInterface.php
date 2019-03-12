@@ -4,7 +4,7 @@ namespace robertobadjio\medical\dispatchers;
 
 /**
  * Interface EventDispatcherInterface
- * @package Medical\Dispatchers
+ * @package robertobadjio\medical\dispatchers
  */
 interface EventDispatcherInterface
 {

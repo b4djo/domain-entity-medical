@@ -15,7 +15,7 @@ use robertobadjio\medical\entities\EventTrait;
 
 /**
  * Class Client
- * @package Medical\Entities\Client
+ * @package robertobadjio\medical\entities\Client
  */
 class Client implements AggregateInterface
 {

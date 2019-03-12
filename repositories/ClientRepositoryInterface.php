@@ -7,7 +7,7 @@ use robertobadjio\medical\entities\Client\ClientId;
 
 /**
  * Interface ClientRepositoryInterface
- * @package Medical\Repositories
+ * @package robertobadjio\medical\repositories
  */
 interface ClientRepositoryInterface
 {

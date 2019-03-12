@@ -9,7 +9,7 @@ use robertobadjio\medical\entities\Client\Phones;
 
 /**
  * Class ClientDto
- * @package Medical\Entities\Client\dto
+ * @package robertobadjio\medical\entities\Client\dto
  */
 class ClientDto
 {
