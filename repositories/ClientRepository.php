@@ -40,7 +40,7 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * @param Client $client
      */
-    public function save(Client $client): void
+    public function save(Client $client)/*: void*/
     {
         $this->items[$client->getId()->getId()] = $client;
     }
@@ -48,7 +48,7 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * @param Client $client
      */
-    public function remove(Client $client): void
+    public function remove(Client $client)/*: void*/
     {
         if ($this->items[$client->getId()->getId()]) {
             unset($this->items[$client->getId()->getId()]);
