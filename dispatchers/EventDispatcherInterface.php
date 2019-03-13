@@ -11,5 +11,5 @@ interface EventDispatcherInterface
     /**
      * @param array $events
      */
-    public function dispatch(array $events): void;
+    public function dispatch(array $events)/*: void*/;
 }

@@ -31,7 +31,7 @@ class Phones
     /**
      * @param Phone $phone
      */
-    public function add(Phone $phone): void
+    public function add(Phone $phone)/*: void*/
     {
         foreach ($this->phones as $item) {
             if ($item->isEqualTo($phone)) {

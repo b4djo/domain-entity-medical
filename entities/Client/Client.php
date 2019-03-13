@@ -81,7 +81,7 @@ class Client implements AggregateInterface
     /**
      * @param Name $name
      */
-    public function rename(Name $name): void
+    public function rename(Name $name)/*: void*/
     {
         $this->name = $name;
 
@@ -91,7 +91,7 @@ class Client implements AggregateInterface
     /**
      * @param Address $address
      */
-    public function changeAddress(Address $address): void
+    public function changeAddress(Address $address)/*: void*/
     {
         $this->address = $address;
 
@@ -125,7 +125,7 @@ class Client implements AggregateInterface
     /**
      * @param Phone $phone
      */
-    public function addPhone(Phone $phone): void
+    public function addPhone(Phone $phone)/*: void*/
     {
         $this->phones->add($phone);
 
@@ -143,14 +143,14 @@ class Client implements AggregateInterface
     /**
      * @param int $index
      */
-    public function removePhone(int $index): void
+    public function removePhone(int $index)/*: void*/
     {
         $phone = $this->phones->remove($index);
 
         $this->setEvent(new ClientPhoneRemoved($this->id, $phone));
     }
 
-    public function remove(): void
+    public function remove()/*: void*/
     {
         if ($this->active) {
             throw new \DomainException('Cannot remove active client.');
@@ -159,7 +159,7 @@ class Client implements AggregateInterface
         $this->setEvent(new ClientRemoved(false));
     }
 
-    public function notActive(): void
+    public function notActive()/*: void*/
     {
         if ($this->active) {
             $this->active = false;
@@ -168,7 +168,7 @@ class Client implements AggregateInterface
         $this->setEvent(new ClientActive(false));
     }
 
-    public function active(): void
+    public function active()/*: void*/
     {
         if (!$this->active) {
             $this->active = true;

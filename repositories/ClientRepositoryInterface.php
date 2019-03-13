@@ -18,19 +18,19 @@ interface ClientRepositoryInterface
     public function get(ClientId $id): Client;
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function add(Client $employee): void;
+    public function add(Client $client)/*: void*/;
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function save(Client $employee): void;
+    public function save(Client $client)/*: void*/;
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function remove(Client $employee): void;
+    public function remove(Client $client)/*: void*/;
 
     /**
      * @return ClientId

@@ -47,7 +47,7 @@ class ClientService
      * @param ClientCreateDto $dto
      * @throws \Exception
      */
-    public function create(ClientCreateDto $dto): void
+    public function create(ClientCreateDto $dto)/*: void*/
     {
         $clientDto = new ClientDto();
         $clientDto->id = $this->clients->nextId();
@@ -82,7 +82,7 @@ class ClientService
      * @param ClientId $id
      * @param NameDto $dto
      */
-    public function rename(ClientId $id, NameDto $dto): void
+    public function rename(ClientId $id, NameDto $dto)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->rename(new Name(
@@ -98,7 +98,7 @@ class ClientService
      * @param ClientId $id
      * @param AddressDto $dto
      */
-    public function changeAddress(ClientId $id, AddressDto $dto): void
+    public function changeAddress(ClientId $id, AddressDto $dto)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->changeAddress(new Address(
@@ -116,7 +116,7 @@ class ClientService
      * @param ClientId $id
      * @param PhoneDto $dto
      */
-    public function addPhone(ClientId $id, PhoneDto $dto): void
+    public function addPhone(ClientId $id, PhoneDto $dto)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->addPhone(new Phone(
@@ -132,7 +132,7 @@ class ClientService
      * @param ClientId $id
      * @param $index
      */
-    public function removePhone(ClientId $id, $index): void
+    public function removePhone(ClientId $id, $index)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->removePhone($index);
@@ -143,7 +143,7 @@ class ClientService
     /**
      * @param ClientId $id
      */
-    public function active(ClientId $id): void
+    public function active(ClientId $id)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->active();
@@ -154,7 +154,7 @@ class ClientService
     /**
      * @param ClientId $id
      */
-    public function notActive(ClientId $id): void
+    public function notActive(ClientId $id)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->notActive();
@@ -165,7 +165,7 @@ class ClientService
     /**
      * @param ClientId $id
      */
-    public function remove(ClientId $id): void
+    public function remove(ClientId $id)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->remove();

@@ -30,28 +30,28 @@ class ClientRepository implements ClientRepositoryInterface
     }
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function add(Client $employee): void
+    public function add(Client $client)
     {
-        $this->items[$employee->getId()->getId()] = $employee;
+        $this->items[$client->getId()->getId()] = $client;
     }
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function save(Client $employee): void
+    public function save(Client $client): void
     {
-        $this->items[$employee->getId()->getId()] = $employee;
+        $this->items[$client->getId()->getId()] = $client;
     }
 
     /**
-     * @param Client $employee
+     * @param Client $client
      */
-    public function remove(Client $employee): void
+    public function remove(Client $client): void
     {
-        if ($this->items[$employee->getId()->getId()]) {
-            unset($this->items[$employee->getId()->getId()]);
+        if ($this->items[$client->getId()->getId()]) {
+            unset($this->items[$client->getId()->getId()]);
         }
     }
 

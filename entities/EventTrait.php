@@ -16,7 +16,7 @@ trait EventTrait
     /**
      * @param $event
      */
-    public function setEvent($event): void
+    public function setEvent($event)
     {
         $this->events[] = $event;
     }
