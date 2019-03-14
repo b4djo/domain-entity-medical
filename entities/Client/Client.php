@@ -75,7 +75,7 @@ class Client implements AggregateInterface
         $this->createDate = new \DateTimeImmutable();
         $this->active     = $clientDto->active;
 
-        $this->setEvent(new ClientCreated($this->id));
+        $this->setEvent(new ClientCreated(new ClientId($this->id)));
     }
 
     /**

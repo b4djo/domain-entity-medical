@@ -35,5 +35,5 @@ interface ClientRepositoryInterface
     /**
      * @return ClientId
      */
-    public function nextId(): ClientId;
+    public function nextId();/*: ClientId;*/
 }
