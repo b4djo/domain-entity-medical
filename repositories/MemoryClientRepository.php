@@ -7,10 +7,10 @@ use robertobadjio\medical\entities\Client\ClientId;
 use Ramsey\Uuid\Uuid;
 
 /**
- * Class ClientRepository
+ * Class MemoryClientRepository
  * @package robertobadjio\medical\repositories
  */
-class ClientRepository implements ClientRepositoryInterface
+class MemoryClientRepository implements ClientRepositoryInterface
 {
     /**
      * @var array
@@ -26,6 +26,7 @@ class ClientRepository implements ClientRepositoryInterface
         if (!isset($this->items[$id->getId()])) {
             throw new NotFoundException('Employee not found.');
         }
+
         return clone $this->items[$id->getId()];
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace robertobadjio\medical\Tests\unit\entities\Client;
+namespace robertobadjio\medical\tests\unit\entities\Client;
 
 use robertobadjio\medical\entities\Client\Address;
 use robertobadjio\medical\entities\Client\Client;

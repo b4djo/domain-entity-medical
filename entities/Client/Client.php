@@ -176,4 +176,14 @@ class Client implements AggregateInterface
 
         $this->setEvent(new ClientActive(true));
     }
+
+    public function getCreateDate(): \DateTimeImmutable
+    {
+        return $this->createDate;
+    }
+
+    public function isActive(): bool
+    {
+        return $this->active;
+    }
 }
