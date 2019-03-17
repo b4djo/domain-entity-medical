@@ -22,7 +22,7 @@ abstract class Id
      */
     public function __construct($id = null)
     {
-        Assertion::notEmpty($id);
+        //Assertion::notEmpty($id);
 
         $this->id = $id;
     }
