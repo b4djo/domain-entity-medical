@@ -1,9 +1,8 @@
 <?php
 
-namespace Employee;
+namespace robertobadjio\medical\entities\Employee;
 
 use robertobadjio\medical\entities\Employee\dto\EmployeeDto;
-use robertobadjio\medical\entities\Employee\EmployeeId;
 use robertobadjio\medical\entities\Employee\events\EmployeeCreated;
 use robertobadjio\medical\entities\EventTrait;
 use robertobadjio\medical\entities\Name;
