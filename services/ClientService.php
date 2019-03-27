@@ -11,7 +11,7 @@ use robertobadjio\medical\entities\Client\dto\ClientCreateDto;
 use robertobadjio\medical\entities\Client\dto\ClientDto;
 use robertobadjio\medical\entities\Client\dto\NameDto;
 use robertobadjio\medical\entities\Client\dto\PhoneDto;
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 use robertobadjio\medical\entities\Client\Phone;
 use robertobadjio\medical\entities\Client\Phones;
 use robertobadjio\medical\repositories\ClientRepositoryInterface;

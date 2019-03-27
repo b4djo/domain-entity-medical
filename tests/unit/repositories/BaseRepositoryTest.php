@@ -4,7 +4,7 @@ namespace robertobadjio\medical\tests\unit\repositories;
 
 use PHPUnit\Framework\TestCase;
 use robertobadjio\medical\entities\Client\ClientId;
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 use robertobadjio\medical\entities\Client\Phone;
 use robertobadjio\medical\entities\Client\Phones;
 use robertobadjio\medical\repositories\MemoryClientRepository;

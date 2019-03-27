@@ -4,7 +4,7 @@ namespace robertobadjio\medical\entities\Client\dto;
 
 use robertobadjio\medical\entities\Client\Address;
 use robertobadjio\medical\entities\Client\ClientId;
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 use robertobadjio\medical\entities\Client\Phones;
 
 /**

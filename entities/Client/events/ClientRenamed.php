@@ -2,7 +2,7 @@
 
 namespace robertobadjio\medical\entities\Client\events;
 
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 
 /**
  * Class ClientRenamed

@@ -6,7 +6,7 @@ use robertobadjio\medical\entities\Client\Address;
 use robertobadjio\medical\entities\Client\Client;
 use robertobadjio\medical\entities\Client\ClientId;
 use robertobadjio\medical\entities\Client\dto\ClientDto;
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 use robertobadjio\medical\entities\Client\Phone;
 use robertobadjio\medical\entities\Client\Phones;
 

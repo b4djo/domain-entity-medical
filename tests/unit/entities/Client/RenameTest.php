@@ -3,7 +3,7 @@
 namespace robertobadjio\medical\tests\unit\entities\Client;
 
 use robertobadjio\medical\entities\Client\events\ClientRenamed;
-use robertobadjio\medical\entities\Client\Name;
+use robertobadjio\medical\entities\Name;
 use PHPUnit\Framework\TestCase;
 
 /**

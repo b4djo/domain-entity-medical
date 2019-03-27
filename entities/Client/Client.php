@@ -12,6 +12,7 @@ use robertobadjio\medical\entities\Client\events\ClientPhoneRemoved;
 use robertobadjio\medical\entities\Client\events\ClientRemoved;
 use robertobadjio\medical\entities\Client\events\ClientRenamed;
 use robertobadjio\medical\entities\EventTrait;
+use robertobadjio\medical\entities\Name;
 
 /**
  * Class Client
@@ -177,11 +178,17 @@ class Client implements AggregateInterface
         $this->setEvent(new ClientActive(true));
     }
 
+    /**
+     * @return \DateTimeImmutable
+     */
     public function getCreateDate(): \DateTimeImmutable
     {
         return $this->createDate;
     }
 
+    /**
+     * @return bool
+     */
     public function isActive(): bool
     {
         return $this->active;
