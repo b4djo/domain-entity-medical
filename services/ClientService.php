@@ -72,10 +72,10 @@ class ClientService
             );
         }, $dto->phones));
 
-        $employee = new Client($clientDto);
+        $client = new Client($clientDto);
 
-        $this->clients->add($employee);
-        $this->dispatcher->dispatch($employee->getEvents());
+        $this->clients->add($client);
+        $this->dispatcher->dispatch($client->getEvents());
     }
 
     /**
@@ -130,9 +130,9 @@ class ClientService
 
     /**
      * @param ClientId $id
-     * @param $index
+     * @param int $index
      */
-    public function removePhone(ClientId $id, $index)/*: void*/
+    public function removePhone(ClientId $id, int $index)/*: void*/
     {
         $client = $this->clients->get($id);
         $client->removePhone($index);

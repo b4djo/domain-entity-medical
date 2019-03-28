@@ -24,7 +24,7 @@ class MemoryClientRepository implements ClientRepositoryInterface
     public function get(ClientId $id): Client
     {
         if (!isset($this->items[$id->getId()])) {
-            throw new NotFoundException('Employee not found.');
+            throw new NotFoundException('Client not found.');
         }
 
         return clone $this->items[$id->getId()];

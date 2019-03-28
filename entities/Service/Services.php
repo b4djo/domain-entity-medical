@@ -6,7 +6,7 @@ namespace robertobadjio\medical\entities\Service;
  * Class Services
  * @package robertobadjio\medical\entities\Service
  */
-class Services
+abstract class Services
 {
     private $id;
 
